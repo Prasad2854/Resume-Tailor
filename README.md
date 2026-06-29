@@ -2,6 +2,10 @@
 
 Gappy is an AI-assisted resume tailoring experience built for the Gappy AI / Lemma hackathon. The project combines a modern React frontend with a resume-tailor workflow pod to help users upload a resume, analyze a job description, and generate an ATS-friendly tailored resume.
 
+## Live Demo
+
+Open the deployed app here: https://resumint.apps.lemma.work/
+
 ## Project Structure
 
 - frontend/: Vite + React application for the user experience
