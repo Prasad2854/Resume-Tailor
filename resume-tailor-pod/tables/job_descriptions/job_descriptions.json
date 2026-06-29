@@ -1,0 +1,12 @@
+{
+  "name": "job_descriptions",
+  "primary_key_column": "id",
+  "enable_rls": true,
+  "visibility": "POD",
+  "columns": [
+    { "name": "company", "type": "TEXT", "required": true, "max_length": 240 },
+    { "name": "title", "type": "TEXT", "required": true, "max_length": 240 },
+    { "name": "description", "type": "TEXT", "required": true }
+  ],
+  "config": {}
+}

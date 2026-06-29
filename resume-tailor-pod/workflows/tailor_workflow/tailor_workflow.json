@@ -1,0 +1,44 @@
+{
+  "name": "tailor_workflow",
+  "description": "Workflow to tailor a resume using an agent and save it to the tailored_resumes table.",
+  "start": { "type": "MANUAL" },
+  "nodes": [
+    {
+      "id": "intake",
+      "type": "FORM",
+      "label": "Input Resume & Job Description",
+      "config": {
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "base_resume_text": { "type": "string" },
+            "job_description_text": { "type": "string" }
+          },
+          "required": ["base_resume_text", "job_description_text"]
+        }
+      }
+    },
+    {
+      "id": "process",
+      "type": "AGENT",
+      "label": "Agent Tailoring",
+      "config": {
+        "agent_name": "resume_tailor",
+        "input_mapping": {
+          "base_resume": { "type": "expression", "value": "intake.base_resume_text" },
+          "job_description": { "type": "expression", "value": "intake.job_description_text" }
+        }
+      }
+    },
+    {
+      "id": "end",
+      "type": "END",
+      "label": "Done"
+    }
+  ],
+  "edges": [
+    { "id": "e1", "source": "intake", "target": "process" },
+    { "id": "e2", "source": "process", "target": "end" }
+  ],
+  "visibility": "POD"
+}

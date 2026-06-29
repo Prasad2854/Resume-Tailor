@@ -1,0 +1,10 @@
+{
+  "name": "resume_tailor",
+  "description": "Tailors a base resume to match a specific job description.",
+  "instruction": { "$file": "instruction.md" },
+  "toolsets": ["POD"],
+  "visibility": "POD",
+  "permissions": {
+    "grants": []
+  }
+}

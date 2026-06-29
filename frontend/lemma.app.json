@@ -1,0 +1,11 @@
+{
+  "name": "resumint",
+  "title": "Resumint",
+  "template": "lemma-vite",
+  "podId": "019f0963-44fb-71ed-b3be-5eb7c654c558",
+  "runtime": {
+    "apiUrl": "https://api.lemma.work",
+    "authUrl": "https://lemma.work/auth",
+    "appBasePath": "/"
+  }
+}

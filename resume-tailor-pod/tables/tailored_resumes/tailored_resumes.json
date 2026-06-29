@@ -1,0 +1,12 @@
+{
+  "name": "tailored_resumes",
+  "primary_key_column": "id",
+  "enable_rls": true,
+  "visibility": "POD",
+  "columns": [
+    { "name": "resume_id", "type": "UUID", "foreign_key": { "references": "resumes.id" } },
+    { "name": "job_id", "type": "UUID", "foreign_key": { "references": "job_descriptions.id" } },
+    { "name": "tailored_content", "type": "TEXT", "required": true }
+  ],
+  "config": {}
+}

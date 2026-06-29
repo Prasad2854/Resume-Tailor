@@ -1,0 +1,11 @@
+{
+  "name": "resumes",
+  "primary_key_column": "id",
+  "enable_rls": true,
+  "visibility": "POD",
+  "columns": [
+    { "name": "name", "type": "TEXT", "required": true, "max_length": 240 },
+    { "name": "content", "type": "TEXT", "required": true }
+  ],
+  "config": {}
+}
